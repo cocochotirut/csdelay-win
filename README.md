@@ -1,8 +1,8 @@
 # Creating Sound DSP Audio Programming Series #
 
-Welcome to the [Creating Sound](http://creatingsound.com) DSP Audio Programming series. This series will be introducing simple DSP audio effects that run in real time using the Portaudio sound engine, a cross-platform simple C API for interfacing with a wide variety of PC audio systems on Mac, Windows, and Linux. 
+Welcome to the [Creating Sound](http://creatingsound.com) DSP Audio Programming series. This series introduces simple DSP audio effects that run in real time using the Portaudio sound engine, a cross-platform simple C API for interfacing with a wide variety of PC audio systems on Mac, Windows, and Linux. 
 
-These projects include already-built binaries of Portaudio, but it may be necessary to download and build them yourself in some cases.  These binaries were built on Mac OSX 10.8.3 and Windows 7.  To build Portaudio yourself, go to [Portaudio](http://www.portaudio.com/download.html) and follow the build instructions. 
+These projects include already-built binaries of Portaudio, but it may be necessary to download and build them yourself in some cases.  These binaries were built on Mac OSX 10.8.3 and Windows 7 (32-bit).  To build Portaudio yourself, go to [Portaudio](http://www.portaudio.com/download.html) and follow the build instructions. 
 
 To run, simply build and execute the application, or run in debug mode from Xcode or Visual Studio. To keep things simple, the applications run in the console. If no errors occur and Portaudio is initialized, the message `Portaudio is running...` appears on the screen and you are free to play sounds/music using an instrument or microphone through the input audio device to hear the effect.
 
@@ -29,6 +29,10 @@ Delay is one of the most basic and fundamental of DSP effects that serves as a f
 * Make it a true stereo delay by giving each channel unique parameters.
 * Make a tap delay where you can specify a number of unique delay times, which allow you to create interesting delay rhythms.
 * Make a variable delay that can be modulated by an LFO that, at low frequencies, will result in vibrato.
+
+#### Note regarding Windows version ####
+You may encounter some clicks and pops building in debug mode if the delay includes feedback. This problem disappears in the release build, and 
+only exists in the Windows version according to my tests.  This may indicate a problem/bug with the debug build of Portaudio with Windows.
 
 ---
 
